@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 
 // Components
 import Navbar from "./Navbar";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
@@ -20,12 +21,16 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-8">
           <Navbar />
           <Link href="/contact">
-            <Button className="bg-accent hover:bg-accent-hover text-primary">Hire me</Button>
+            <Button className="bg-accent hover:bg-accent-hover text-primary">
+              Hire me
+            </Button>
           </Link>
         </div>
 
         {/* Mobile navbar */}
-        <div className="lg:hidden">Mobile Nav</div>
+        <div className="lg:hidden">
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
