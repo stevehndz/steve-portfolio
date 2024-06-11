@@ -21,7 +21,7 @@ const Header = () => {
         <div className="hidden lg:flex items-center gap-8">
           <Navbar />
           <Link href="/contact">
-            <Button className="bg-accent hover:bg-accent-hover text-primary">
+            <Button>
               Hire me
             </Button>
           </Link>
