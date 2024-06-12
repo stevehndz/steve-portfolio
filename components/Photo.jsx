@@ -30,7 +30,7 @@ const Photo = () => {
               ease: "easeInOut",
             },
           }}
-          className="w-[248px] h-[248px] lg:w-[498px] lg:h-[498px] mix-blend-lighten absolute"
+          className="w-[248px] h-[248px] lg:w-[468px] lg:h-[468px] mix-blend-lighten absolute"
         >
           <Image
             src={img}
@@ -44,7 +44,7 @@ const Photo = () => {
 
         {/* frame */}
         <motion.svg
-          className="w-[253px] lg:w-[506px] h-[253px] lg:h-[506px]"
+          className="w-[253px] lg:w-[476px] h-[253px] lg:h-[476px]"
           fill="transparent"
           viewBox="0 0 506 506"
           xmlns="http://www.w3.org/2000/svg"

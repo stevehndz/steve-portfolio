@@ -8,9 +8,9 @@ import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
-    <section className="h-full lg:h-[calc(100vh-108px)]">
+    <section className="h-full pt-2 pb-12 lg:pt-0 lg:pb-0">
       <div className="container mx-auto h-full">
-        <div className="h-full pb-12 lg:pb-0 flex flex-col lg:flex-row items-center justify-between">
+        <div className="h-full flex flex-col lg:flex-row items-center justify-between lg:pb-12">
           {/* text */}
           <div className="text-center lg:text-left order-2 lg:order-none">
             <span className="text-xl">Computer Systems Engineer</span>
