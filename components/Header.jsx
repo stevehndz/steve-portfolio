@@ -22,7 +22,7 @@ const Header = () => {
           <Navbar />
           <Link href="/contact">
             <Button>
-              Hire me
+              Contact Me
             </Button>
           </Link>
         </div>
