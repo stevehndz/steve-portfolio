@@ -14,7 +14,7 @@ import {
   SiTailwindcss,
   SiNextdotjs,
   SiExpress,
-  SiJson,
+  SiJsonwebtokens,
   SiMongodb,
   SiPostgresql,
 } from "react-icons/si";
@@ -61,7 +61,7 @@ const experience = {
   icon: "/public/assets/resume/badge.svg",
   title: "My Experience",
   description:
-    "quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis",
+    "During my training process, I have gained experience from my academic projects, as well as from personal projects, which I have designed, developed and documented always with solid foundations.",
   items: [
     {
       company: "Gloria's Logistics.",
@@ -81,7 +81,7 @@ const education = {
   icon: "/public/assets/resume/badge.svg",
   title: "My Education",
   description:
-    "quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis",
+    "As a Computer Systems Engineer, I have a strong academic background and practical experience in the design, development and implementation of innovative software solutions.",
   items: [
     {
       company: "Universidad Nacional de El Salvador.",
@@ -160,7 +160,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis",
+    "Throughout my career, I have developed a wide range of skills, in the design, development and implementation of web and mobile applications, which include:",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -207,7 +207,7 @@ const skills = {
       name: "Tailwind.css",
     },
     {
-      icon: <SiJson />,
+      icon: <SiJsonwebtokens />,
       name: "Json",
     },
     {
@@ -295,7 +295,7 @@ const Resume = () => {
             {/* education */}
             <TabsContent value="education" className="w-full">
               <div className="flex flex-col gap-[24px] text-center lg:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                <h3 className="text-4xl font-bold">{education.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto lg:mx-0">
                   {education.description}
                 </p>
@@ -326,17 +326,34 @@ const Resume = () => {
             {/* skills */}
             <TabsContent value="skills" className="w-full">
               <div className="flex flex-col gap-[30px]">
-                <div>
+                <div className="flex flex-col gap-[30px] text-center lg:text-left">
                   <h3 className="text-4xl font-bold">{skills.title}</h3>
                   <p className="max-w-[600px] text-white/60 mx-auto lg:mx-0">
                     {skills.description}
                   </p>
                 </div>
-                <ul>
-                  {skills.skillList.map((skill, index) => {
-                    return <li key={index}>{skill.name}</li>;
-                  })}
-                </ul>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 lg:gap-[30px]">
+                    {skills.skillList.map((skill, index) => {
+                      return (
+                        <li key={index}>
+                          <TooltipProvider delayDuration={100}>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[100px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                <div className="text-5xl group-hover:text-accent transition-all duration-300">
+                                  {skill.icon}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p className="capitalize">{skill.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
             {/* about me */}
