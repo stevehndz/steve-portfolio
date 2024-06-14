@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { FiDownload } from "react-icons/fi";
+import Link from "next/link";
 
 // Components
 import Socials from "@/components/Socials";
@@ -29,7 +30,9 @@ const Home = () => {
                 size="lg"
                 className="uppercase flex items-center gap-2"
               >
-                <span>Download CV</span>
+                <Link href="https://drive.google.com/file/d/1kGi9d1_SLfK6TSUSx8np3FXKX21P5u0-/view?usp=drive_link" target="_blank">
+                  <span>Download CV</span>
+                </Link>
                 <FiDownload className="text-xl" />
               </Button>
               <div className="mb-8 lg:mb-0">
