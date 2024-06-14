@@ -23,7 +23,7 @@ import {
 const about = {
   title: "About me",
   description:
-    "quam quisque id diam vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit duis",
+    "I am a computer systems engineer with a passion for web development. I love being on the cutting edge of new technologies and using them to create unique and engaging web experiences. I am constantly looking for new ways to improve my skills and knowledge, and I am always eager to take on new challenges.",
   info: [
     {
       fieldName: "Name",
@@ -357,8 +357,29 @@ const Resume = () => {
               </div>
             </TabsContent>
             {/* about me */}
-            <TabsContent value="about" className="w-full">
-              about me
+            <TabsContent
+              value="about"
+              className="w-full text-center lg:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto lg:mx-0">
+                  {about.description}
+                </p>
+                <ul className="grid grid-cols-1 lg:grid-cols-2 gap-y-6 max-w-[600px] mx-auto lg:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center lg:justify-start gap-4"
+                      >
+                        <span className="text-white/60">{item.fieldName}</span>
+                        <span className="text-lg">{item.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
