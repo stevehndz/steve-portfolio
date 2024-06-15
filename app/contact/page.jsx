@@ -118,11 +118,7 @@ const Contact = () => {
                 />
               </div>
               {/* select */}
-              <Select
-                defaultValue={subject}
-                id="subject"
-                onChange={(event) => setSubject(event.target.value)}
-              >
+              <Select id="subject">
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
