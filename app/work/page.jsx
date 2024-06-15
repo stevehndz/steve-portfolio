@@ -27,8 +27,12 @@ const projects = [
     title: "e-commerce Kouture",
     description:
       "tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel",
-    stack: [{ name: "HTML5" }, { name: "Tailwind.css" }, { name: "Javascript" }],
-    image: "/public/assets/work/p1.png",
+    stack: [
+      { name: "HTML5" },
+      { name: "Tailwind.css" },
+      { name: "Javascript" },
+    ],
+    image: "/assets/work/p1.png",
     live: "https://e-com-kouture.vercel.app/",
     github: "https://github.com/stevehndz/e-commerce",
   },
@@ -39,7 +43,7 @@ const projects = [
     description:
       "tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel",
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/",
+    image: "/assets/work/p1.png",
     live: "",
     github: "",
   },
