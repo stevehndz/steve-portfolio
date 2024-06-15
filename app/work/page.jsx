@@ -26,7 +26,7 @@ const projects = [
     category: "Front-End",
     title: "e-commerce Kouture",
     description:
-      "tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel",
+      "Browse through a wide selection of garments and accessories on a website with minimalist and elegant design, where high quality images are the protagonists.",
     stack: [
       { name: "HTML5" },
       { name: "Tailwind.css" },
@@ -38,14 +38,20 @@ const projects = [
   },
   {
     num: "02",
-    category: "Front-End",
-    title: "Project 2",
+    category: "Full-Stack",
+    title: "Blog App",
     description:
-      "tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel",
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Node.js" }],
-    image: "/assets/work/p1.png",
-    live: "",
-    github: "",
+      "Explore articles, trends and style tips with a fluid and responsive interface. Interact with the community through comments.",
+    stack: [
+      { name: "Next.js" },
+      { name: "MongoDB" },
+      { name: "Express" },
+      { name: "Tailwind.css" },
+      { name: "Node.js" },
+    ],
+    image: "/assets/work/p2.png",
+    live: "https://mern-blog-app-sooty.vercel.app/",
+    github: "https://github.com/stevehndz/mern-blog",
   },
 ];
 
