@@ -102,13 +102,13 @@ const Contact = () => {
                   id="lastname"
                   onChange={(event) => setLastname(event.target.value)}
                 />
-                <Input
+                {/* <Input
                   type="email"
                   placeholder="Email"
                   value={email}
                   id="email"
                   onChange={(event) => setEmail(event.target.value)}
-                />
+                /> */}
                 <Input
                   type="phone"
                   placeholder="Phone Number"
