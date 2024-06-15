@@ -93,10 +93,10 @@ const Work = () => {
               {/* project description */}
               <p className="text-white/60">{project.description}</p>
               {/* stack */}
-              <ul className="flex gap-4">
+              <ul className="flex gap-4 flex-wrap">
                 {project.stack.map((item, index) => {
                   return (
-                    <li key={index} className="text-xl text-accent">
+                    <li key={index} className="text-lg lg:text-xl text-accent">
                       {item.name}
                       {/* generate comma and remove last */}
                       {index !== project.stack.length - 1 && ","}
