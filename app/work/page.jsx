@@ -24,13 +24,13 @@ const projects = [
   {
     num: "01",
     category: "Front-End",
-    title: "Project 1",
+    title: "e-commerce Kouture",
     description:
       "tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae congue mauris rhoncus aenean vel",
-    stack: [{ name: "HTML5" }, { name: "CSS3" }, { name: "Javascript" }],
-    image: "/",
-    live: "",
-    github: "",
+    stack: [{ name: "HTML5" }, { name: "Tailwind.css" }, { name: "Javascript" }],
+    image: "/public/assets/work/p1.png",
+    live: "https://e-com-kouture.vercel.app/",
+    github: "https://github.com/stevehndz/e-commerce",
   },
   {
     num: "02",
