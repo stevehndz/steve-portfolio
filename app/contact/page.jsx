@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -37,6 +39,31 @@ const info = [
 import { motion } from "framer-motion";
 
 const Contact = () => {
+  // setvalues from contact form
+  const [name, setName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("");
+
+  // send email message method
+  const handleSendEmail = () => {
+    const email = "steve.r.hndz@gmail.com"; // your email here
+    // your precharged message here
+    const messageLink = `mailto:${email}?subject=${subject}&body=${encodeURIComponent(
+      "Hello I am " +
+        name +
+        " " +
+        lastname +
+        ".\n" +
+        message +
+        "\nPhone number: " +
+        phone
+    )}`;
+    window.open(messageLink, "_blank"); // open message app
+  };
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -55,28 +82,56 @@ const Contact = () => {
           {/* form */}
           <div className="lg:h-[54%] order-2 lg:order-none">
             <form
-              action=""
+              onSubmit={handleSendEmail}
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
             >
               <h3 className="text-4xl text-accent">Work together</h3>
               {/* inputs */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="First Name" />
-                <Input type="lastname" placeholder="Last Name" />
-                <Input type="email" placeholder="Email" />
-                <Input type="phone" placeholder="Phone Number" />
+                <Input
+                  type="firstname"
+                  placeholder="First Name"
+                  value={name}
+                  id="name"
+                  onChange={(event) => setName(event.target.value)}
+                />
+                <Input
+                  type="lastname"
+                  placeholder="Last Name"
+                  value={lastname}
+                  id="lastname"
+                  onChange={(event) => setLastname(event.target.value)}
+                />
+                <Input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  id="email"
+                  onChange={(event) => setEmail(event.target.value)}
+                />
+                <Input
+                  type="phone"
+                  placeholder="Phone Number"
+                  value={phone}
+                  id="phone"
+                  onChange={(event) => setPhone(event.target.value)}
+                />
               </div>
               {/* select */}
-              <Select>
+              <Select
+                defaultValue={subject}
+                id="subject"
+                onChange={(event) => setSubject(event.target.value)}
+              >
                 <SelectTrigger className="w-full">
                   <SelectValue placeholder="Select a service" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value="est">Web Development</SelectItem>
-                    <SelectItem value="cst">UX/UI Design</SelectItem>
-                    <SelectItem value="mst">Logo Design</SelectItem>
+                    <SelectItem value="web">Web Development</SelectItem>
+                    <SelectItem value="ux">UX/UI Design</SelectItem>
+                    <SelectItem value="logo">Logo Design</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
@@ -84,8 +139,11 @@ const Contact = () => {
               <Textarea
                 className="h-[90px]"
                 placeholder="Type your message here."
+                value={message}
+                id="message"
+                onChange={(event) => setMessage(event.target.value)}
               />
-              <Button size="md" className="max-w-40">
+              <Button size="md" type="submit" className="max-w-40">
                 Send Message
               </Button>
             </form>
