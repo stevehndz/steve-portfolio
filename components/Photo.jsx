@@ -38,7 +38,7 @@ const Photo = () => {
             quality={100}
             fill
             alt=""
-            className="object-contain"
+            className="cover"
           />
         </motion.div>
 
